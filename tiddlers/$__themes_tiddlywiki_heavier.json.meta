@@ -1,0 +1,9 @@
+author: JeremyRuston
+core-version: >=5.0.0
+dependents: $:/themes/tiddlywiki/snowwhite
+description: Heavier font theme
+name: Heavier
+plugin-type: theme
+title: $:/themes/tiddlywiki/heavier
+type: application/json
+version: 5.3.3
