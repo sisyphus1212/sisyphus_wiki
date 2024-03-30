@@ -1,7 +1,7 @@
 created: 20240330153408169
 creator: sisyphus1212
-modified: 20240330153408169
+modified: 20240330155431516
 modifier: sisyphus1212
 title: $:/config/SideBar/Visibility/$:/plugins/kookma/refnotes/ui/bibtexlibrary
 
-hide
+show
