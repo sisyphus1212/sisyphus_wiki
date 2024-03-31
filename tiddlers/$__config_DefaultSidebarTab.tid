@@ -1,8 +1,8 @@
 created: 20240330150402941
 creator: LinOnetwo
-modified: 20240330150402941
+modified: 20240331124808261
 modifier: sisyphus1212
 title: $:/config/DefaultSidebarTab
 type: text/vnd.tiddlywiki
 
-$:/core/ui/SideBar/More
+$:/plugins/linonetwo/itonnote/Sidebar/FolderMenu
