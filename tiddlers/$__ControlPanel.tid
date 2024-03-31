@@ -1,0 +1,10 @@
+color: #bbb
+created: 20240331131725592
+icon: $:/core/images/options-button
+modified: 20240331131725593
+title: $:/ControlPanel
+
+\whitespace trim
+<div class="tc-control-panel">
+<$macrocall $name="tabs" tabsList="[all[shadows+tiddlers]tag[$:/tags/ControlPanel]!has[draft.of]]" default="$:/core/ui/ControlPanel/Info" explicitState="$:/state/tab-1749438307"/>
+</div>
