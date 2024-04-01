@@ -1,8 +1,8 @@
 created: 20240401085627238
 creator: sisyphus1212
-modified: 20240401085641374
+modified: 20240401090957431
 modifier: sisyphus1212
-tags: vhost_virtqueue
+tags: ysk2_adapter
 title: vring_info
 
 ```c
