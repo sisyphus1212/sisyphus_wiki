@@ -1,0 +1,24 @@
+created: 20240401085627238
+creator: sisyphus1212
+modified: 20240401085641374
+modifier: sisyphus1212
+tags: vhost_virtqueue
+title: vring_info
+
+```c
+struct vring_info {
+    uint64_t desc;
+    uint64_t avail;
+    uint64_t used;
+    uint64_t size;
+    uint64_t last_avail_idx;
+    uint64_t last_used_idx;
+    bool enable;
+    uint16_t index;
+    struct rte_intr_handle *notify_handle;
+    struct rte_intr_handle *intr_handle;
+    struct ysk2_internal *internal;
+    rte_iova_t m_vring_iova;
+};
+
+```
