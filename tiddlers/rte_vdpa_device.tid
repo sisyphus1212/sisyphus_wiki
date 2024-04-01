@@ -1,8 +1,8 @@
 created: 20240401100511117
 creator: sisyphus1212
-modified: 20240401100654046
+modified: 20240401103259765
 modifier: sisyphus1212
-tags: [[vdpa 数据结构]]
+tags: [[vdpa 数据结构]] ysk2_adapter
 title: rte_vdpa_device
 
 ```c
