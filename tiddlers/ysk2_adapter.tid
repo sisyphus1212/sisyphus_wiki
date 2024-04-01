@@ -1,9 +1,9 @@
 created: 20240401075638795
 creator: sisyphus1212
-modified: 20240401075955106
+modified: 20240401090838488
 modifier: sisyphus1212
-tags: ysk2_adapter
-title: ysk2_adapter_struct
+tags: ysk2_adapter [[vdpa 数据结构]]
+title: ysk2_adapter
 
 ```c
 struct ysk2_adapter {

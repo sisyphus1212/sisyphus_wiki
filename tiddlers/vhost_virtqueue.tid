@@ -1,8 +1,8 @@
 created: 20240401082004362
 creator: sisyphus1212
-modified: 20240401083624446
+modified: 20240401090448174
 modifier: sisyphus1212
-tags: ysk2_adapter_struct
+tags: virtio_net
 title: vhost_virtqueue
 
 ```c
