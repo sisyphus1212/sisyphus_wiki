@@ -1,4 +1,8 @@
 caption: <$list filter="[[$:/language]get[text]removeprefix[$:/languages/]else[en-GB]]" variable="lang"><$list filter="[<lang>search:title[zh]]">太微中文社区插件源(~GitHub版)</$list><$list filter="[<lang>!search:title[zh]]">TiddlyWiki CPL(~GitHub Host)</$list></$list>
+created: 20240401074953062
+creator: sisyphus1212
+modified: 20240401074953062
+modifier: sisyphus1212
 tags: $:/tags/PluginLibrary $:/tags/PluginLibrary/CPL
 title: $:/config/TiddlyWiki-CPL/GitHub
 type: text/vnd.tiddlywiki
