@@ -1,6 +1,6 @@
 created: 20240401075638795
 creator: sisyphus1212
-modified: 20240401075908497
+modified: 20240401075955106
 modifier: sisyphus1212
 tags: ysk2_adapter
 title: ysk2_adapter_struct
@@ -10,18 +10,14 @@ struct ysk2_adapter {
     struct rte_eth_dev *dev;
     struct rte_eth_devargs eth_da;
     struct ysk2_adapter *parent;
-    bool is_legacy_mode;
     bool started;
-    uint16_t switch_domain_id;
     rte_iova_t iova;
-    int vfio_container_fd;
     int configured;
     uint32_t hw_port_id;
     uint16_t vf_id;
     uint8_t pf_id;
     uint8_t IOMEM *hw_addr;
     uint16_t qbase;
-    uint16_t max_qnum;
     uint16_t txqnum;
     uint16_t rxqnum;
     struct ysk2_queue_pair **tx_qps;
