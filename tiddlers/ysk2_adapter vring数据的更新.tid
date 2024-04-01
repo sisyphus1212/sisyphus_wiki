@@ -1,0 +1,16 @@
+created: 20240401091226244
+creator: sisyphus1212
+modified: 20240401091637663
+modifier: sisyphus1212
+tags: 代码逻辑
+title: ysk2_adapter vring数据的更新
+
+```c
+ysk2_pmd_relay_start
+	ysk2_relay_thread_main
+		ysk2_relay_all_queues
+			ysk2_tx_relay
+				ysk2_virtio_tx_split      /* */
+			ysk2_rx_relay
+				ysk2_virtio_rx_split			
+```
