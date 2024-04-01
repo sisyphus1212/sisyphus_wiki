@@ -1,6 +1,6 @@
 created: 20240401091226244
 creator: sisyphus1212
-modified: 20240401095015321
+modified: 20240401095209999
 modifier: sisyphus1212
 tags: 代码逻辑
 title: ysk2_adapter vring数据的更新
@@ -21,4 +21,9 @@ ysk2_pmd_relay_start
 ```
 ysk2_adapter 的数据在`ysk2_tx_relay`这一层更新
 
+!!! 队列使能逻辑
+```c
+ysk2_set_vring_state
+	
+```
 !! 初始化逻辑

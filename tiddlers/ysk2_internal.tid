@@ -1,0 +1,36 @@
+created: 20240401095254431
+creator: sisyphus1212
+modified: 20240401095357447
+modifier: sisyphus1212
+tags: [[vdpa 数据结构]]
+title: ysk2_internal
+
+```c
+struct ysk2_internal {
+    struct rte_pci_device *pdev;
+    struct rte_vdpa_device *vdev;
+    struct ysk2_adapter *hw_backend;
+    int configured;
+    int vfio_container_fd;
+    int vfio_group_fd;
+    int vfio_dev_fd;
+    pthread_t tid;
+    pthread_t intr_tid;
+    int csc_epfd;
+    int epfd;
+    int vid;
+    uint16_t max_queue_pairs;
+    uint64_t features;
+    rte_atomic32_t started;
+    rte_atomic32_t dev_attached;
+    rte_atomic32_t running;
+    rte_spinlock_t lock;
+    rte_spinlock_t dev_lock;
+    int sw_lm;
+    int sw_running;
+    int notify_mode;
+    int pmd_disable;
+    int intr_fd[YSK2_MAX_QUEUE_PAIRS * 2];
+    struct vring m_vring[YSK2_MAX_QUEUE_PAIRS * 2];
+};
+```
