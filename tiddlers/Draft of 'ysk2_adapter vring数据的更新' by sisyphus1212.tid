@@ -2,7 +2,7 @@ created: 20240401091226244
 creator: sisyphus1212
 draft.of: ysk2_adapter vring数据的更新
 draft.title: ysk2_adapter vring数据的更新
-modified: 20240401093656057
+modified: 20240401094013876
 modifier: sisyphus1212
 tags: 代码逻辑
 title: Draft of 'ysk2_adapter vring数据的更新' by sisyphus1212
@@ -14,7 +14,7 @@ ysk2_pmd_relay_start
 		ysk2_relay_all_queues
 			ysk2_tx_relay
 				ysk2_virtio_tx_split      /*这里返回后更新hw->vring[queue_idx].last_avail_idx*/
-				ysk2_vdpa_rx_pkt_burst    /* 1. 
+				ysk2_vdpa_rx_pkt_burst    /* 1. 将virtio desc ahun
 				                          这里返回后更新hw->vring[queue_idx].last_used_idx*/
 			ysk2_rx_relay
 				ysk2_virtio_rx_split			
