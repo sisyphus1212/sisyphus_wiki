@@ -1,8 +1,8 @@
 created: 20240401075638795
 creator: sisyphus1212
-modified: 20240401090838488
+modified: 20240401100214079
 modifier: sisyphus1212
-tags: ysk2_adapter [[vdpa 数据结构]]
+tags: ysk2_adapter [[vdpa 数据结构]] ysk2_internal
 title: ysk2_adapter
 
 ```c

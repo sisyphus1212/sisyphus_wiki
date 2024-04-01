@@ -1,0 +1,39 @@
+created: 20240401100511117
+creator: sisyphus1212
+modified: 20240401100654046
+modifier: sisyphus1212
+tags: [[vdpa 数据结构]]
+title: rte_vdpa_device
+
+```c
+struct rte_vdpa_device {
+	struct rte_device *device;
+	struct rte_vdpa_dev_ops *ops;
+};
+
+struct rte_vdpa_dev_ops {
+	int (*get_queue_num)(struct rte_vdpa_device *dev, uint32_t *queue_num);
+	int (*get_features)(struct rte_vdpa_device *dev, uint64_t *features);
+	int (*get_protocol_features)(struct rte_vdpa_device *dev,
+			uint64_t *protocol_features);
+	int (*dev_conf)(int vid);
+	int (*dev_close)(int vid);
+	int (*set_vring_state)(int vid, int vring, int state);
+	int (*set_features)(int vid);
+	int (*migration_done)(int vid);
+	int (*get_vfio_group_fd)(int vid);
+	int (*get_vfio_device_fd)(int vid);
+	int (*get_notify_area)(int vid, int qid,
+			uint64_t *offset, uint64_t *size);
+	int (*get_stats_names)(struct rte_vdpa_device *dev,
+			struct rte_vdpa_stat_name *stats_names,
+			unsigned int size);
+	int (*get_stats)(struct rte_vdpa_device *dev, int qid,
+			struct rte_vdpa_stat *stats, unsigned int n);
+	int (*reset_stats)(struct rte_vdpa_device *dev, int qid);
+        int (*get_config)(int vid, uint8_t *config, uint32_t size);
+        int (*set_config)(int vid, uint8_t *config, uint32_t offset,
+                      uint32_t size, uint32_t flags);
+	void *reserved[2];
+};
+```

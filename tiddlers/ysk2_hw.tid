@@ -1,0 +1,23 @@
+created: 20240401100349355
+creator: sisyphus1212
+modified: 20240401100408306
+modifier: sisyphus1212
+tags: [[vdpa 数据结构]]
+title: ysk2_hw
+
+```c
+struct ysk2_hw {
+    u64    drv_features;
+    u8     notify_region;
+    u32    notify_offset;
+    u32    notify_len;
+    u32    notify_off_multiplier;
+    struct ysk2_pci_common_cfg *common_cfg;
+    struct ysk2_net_config *dev_cfg;
+    u8     *isr;
+    u16    *notify_base;
+    u16    *notify_addr[YSK2_MAX_QUEUE_PAIRS * 2];
+    struct ysk2_pci_mem_resource mem_resource[YSK2_PCI_MAX_RESOURCE];
+    u8     *lm_cfg;
+};
+```
