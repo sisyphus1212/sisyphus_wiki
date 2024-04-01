@@ -1,29 +1,25 @@
 created: 20240401081736316
 creator: sisyphus1212
-modified: 20240401081801725
+modified: 20240401081843046
 modifier: sisyphus1212
 tags: ysk2_adapter
 title: struct virtio_net
 
 ```c
 struct virtio_net {
-	/* Frontend (QEMU) memory and memory region information */
 	struct rte_vhost_memory	*mem;
 	uint64_t		features;
 	uint64_t		protocol_features;
 	int			vid;
 	uint32_t		flags;
 	uint16_t		vhost_hlen;
-	/* to tell if we need broadcast rarp packet */
 	int16_t			broadcast_rarp;
 	uint32_t		nr_vring;
 	int			async_copy;
-
 	int			extbuf;
 	int			linearbuf;
 	struct vhost_virtqueue	*virtqueue[VHOST_MAX_QUEUE_PAIRS * 2];
 	struct inflight_mem_info *inflight_info;
-#define IF_NAME_SZ (PATH_MAX > IFNAMSIZ ? PATH_MAX : IFNAMSIZ)
 	char			ifname[IF_NAME_SZ];
 	uint64_t		log_size;
 	uint64_t		log_base;
@@ -31,24 +27,16 @@ struct virtio_net {
 	struct rte_ether_addr	mac;
 	uint16_t		mtu;
 	uint8_t			status;
-
 	struct rte_vhost_device_ops const *notify_ops;
-
 	uint32_t		nr_guest_pages;
 	uint32_t		max_guest_pages;
 	struct guest_page       *guest_pages;
-
 	int			slave_req_fd;
 	rte_spinlock_t		slave_req_lock;
-
 	int			postcopy_ufd;
 	int			postcopy_listening;
-
 	struct rte_vdpa_device *vdpa_dev;
-
-	/* context data for the external message handlers */
 	void			*extern_data;
-	/* pre and post vhost user message handlers for the device */
 	struct rte_vhost_user_extern_ops extern_ops;
 } __rte_cache_aligned;
 ```
