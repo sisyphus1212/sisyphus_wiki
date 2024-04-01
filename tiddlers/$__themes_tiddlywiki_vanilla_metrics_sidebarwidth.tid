@@ -5,4 +5,8 @@ modifier: sisyphus1212
 title: $:/themes/tiddlywiki/vanilla/metrics/sidebarwidth
 type: text/vnd.tiddlywiki
 
+<<<<<<< HEAD
 388px
+=======
+296px
+>>>>>>> 7b7e6c7 (使用太记桌面版同步)
