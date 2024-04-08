@@ -1,6 +1,6 @@
 created: 20240401091226244
 creator: sisyphus1212
-modified: 20240401095209999
+modified: 20240408061948029
 modifier: sisyphus1212
 tags: 代码逻辑
 title: ysk2_adapter vring数据的更新
@@ -9,21 +9,21 @@ title: ysk2_adapter vring数据的更新
 !!! 收发包调用逻辑
 ```c
 ysk2_pmd_relay_start
-	ysk2_relay_thread_main
-		ysk2_relay_all_queues
-			ysk2_rx_relay
-				ysk2_virtio_rx_split      /*这里返回后更新hw->vring[queue_idx].last_avail_idx*/
-				ysk2_vdpa_rx_pkt_burst    /* 1. 将virtio desc 转换成ysk2 的desc, 并根据cp 队列收包
-				                             2. 这里返回后更新hw->vring[queue_idx].last_used_idx */
-			ysk2_tx_relay
-				ysk2_virtio_rx_split
-				....
+└── ysk2_relay_thread_main
+    └── ysk2_relay_all_queues
+            ├── ysk2_rx_relay
+        │   ├── ysk2_virtio_rx_split      /*这里返回后更新hw->vring[queue_idx].last_avail_idx*/
+            │   └── ysk2_vdpa_rx_pkt_burst    /* 1. 将virtio desc 转换成ysk2 的desc, 并根据cp 队列收包
+            │                                     2. 这里返回后更新hw->vring[queue_idx].last_used_idx */
+            └── ysk2_tx_relay
+                  ├── ysk2_virtio_tx_split
+            ....
 ```
 ysk2_adapter 的数据在`ysk2_tx_relay`这一层更新
 
 !!! 队列使能逻辑
 ```c
 ysk2_set_vring_state
-	
+
 ```
 !! 初始化逻辑
